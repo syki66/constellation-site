@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function createFile(){
+        var txt = document.getElementByld("txtinput").value;
+        var fileObject = new ActiveXObject("Scripting.FileSystemObject");
+        fWrite = fileObject.CreateTextFile("C:\\Users\syki66\Desktop\그냥\write.txt",true);
+        fWrite.write(txt+"</body></html>");
+        fWrite.close();
+        document.getElementByld("txtinput").innerHTML="저장됨";
+      }
+
+    </script>
+    <textarea name="txtinput" name="text" rows="8" cols="80">
+      fjiawejfiwajfiaewjfij
+    </textarea>
+
+    <input type="button" value="Create File" onclick="createFile()">
+  </body>
+</html>
