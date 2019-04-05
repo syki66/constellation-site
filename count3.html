@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="button" value="12345" onclick="
+    var txtFile = "C:\\Users\syki66\Desktop\그냥\1.txt"
+    var file = new File(txtFile);
+
+    file.open("r");
+    var str = "";
+    while (!file.eof) {
+
+    	str += file.readln() + "\n";
+    }
+    file.close();
+    alert(str);
+    ">
+  </body>
+</html>
