@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="star.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src = "star.js"></script>
+    <title>별자리 퀴즈</title>
+    <style>
+      body{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body onload="createRain()">
+   <section id="rain" class="rain"></section>
+   <h1><a href="index.html">별자리</a></h1>
+   <ul>
+     <div id="menu_grid">
+       <li><a href="12star_html\12star.html">황도 12궁</a></li>
+       <li><a href="season_star.html">계절별 별자리</a></li>
+        <li><a href="find_polar_star.html">북극성 찾기</a></li>
+       <li><a href="lucky_html\lucky.html">운세</a></li>
+       <li><a href="quiz.html">퀴즈</a></li>
+     </div>
+   </ul>
+   <script>
+     function quiz1(){
+       var sum = 0;
+
+       var ans1 = prompt('카시오페아와 북두칠성 사이에 있는 별로써 북극을 찾는데 쓰이는 별은?');
+       if (ans1 == '북극성'){ alert('정답입니다.'); sum+=1; }
+       else { alert('오답입니다.') }
+
+       var ans2 = prompt('W자 모양으로 북극성을 찾을때 이용하는 별자리는?\n 1.오리온자리 2.물병자리 3.카시오페아 자리 4.작은개자리');
+       if (ans2 == '3'){ alert('정답입니다.'); sum+=1; }
+       else{ alert('오답입니다.') }
+
+       var ans3 = prompt('다음 중 겨울철 별자리가 아닌것은?\n 1.황소자리 2.헤라클레스자리 3.큰개자리 4.쌍둥이자리');
+       if (ans2 == '2'){ alert('정답입니다.'); sum+=1; }
+       else{ alert('오답입니다.') }
+
+       alert('총 3문제 중에 '+sum+'문제 맞았습니다. 축하드립니다!');
+
+   }
+   </script>
+      <button type="button" name="button" onclick="quiz1()">퀴즈 시작</button>
+
+  </body>
+</html>
