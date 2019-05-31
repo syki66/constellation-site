@@ -93,3 +93,32 @@ input{
   -webkit-appearance: button;
   outline: none;
 }
+button{
+  background: yellow;
+  color:black;
+  font-size: 40px;
+  padding: 10px;
+  width: 200px;
+  height: 70px;
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  -webkit-appearance: button;
+  outline: none;
+}
+
+@media(max-width:1000px){
+  #grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  p{
+    border-top: 1px solid yellow;
+    border-left: 0;
+    padding-top: 10px;
+  }
+  img{
+    padding-bottom: 10px;
+  }
+}
