@@ -6,11 +6,52 @@
     <link rel="stylesheet" href="star.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src = "star.js"></script>
+    <script src = "date.js"></script>
+
     <title>별자리 퀴즈</title>
     <style>
+
       body{
         text-align: center;
       }
+      p{
+        text-align: left;
+      }
+      input{
+        background: yellow;
+        color:black;
+        font-size: 40px;
+        padding: 10px;
+        width: 100px;
+        height: 50px;
+        padding: 0px;
+        margin: 0px;
+        border: none;
+        -webkit-appearance: checkbox;
+        outline: none;
+      }
+      #answer_btn{
+        -webkit-appearance: textarea;
+        background: yellow;
+        color:black;
+        font-size: 80px;
+        padding: 10px;
+        width: 1900px;
+        height: 100px;
+        padding: 0px;
+        margin: 0px;
+        border: none;
+        outline: none;
+        text-align: center;
+
+      }
+      button{
+        margin-left: 30px;
+      }
+      #start_btn{
+        margin-left: 0px;
+      }
+
     </style>
   </head>
   <body onload="createRain()">
@@ -25,27 +66,97 @@
        <li><a href="quiz.html">퀴즈</a></li>
      </div>
    </ul>
-   <script>
-     function quiz1(){
-       var sum = 0;
 
-       var ans1 = prompt('카시오페아와 북두칠성 사이에 있는 별로써 북극을 찾는데 쓰이는 별은?');
-       if (ans1 == '북극성'){ alert('정답입니다.'); sum+=1; }
-       else { alert('오답입니다.') }
 
-       var ans2 = prompt('W자 모양으로 북극성을 찾을때 이용하는 별자리는?\n 1.오리온자리 2.물병자리 3.카시오페아 자리 4.작은개자리');
-       if (ans2 == '3'){ alert('정답입니다.'); sum+=1; }
-       else{ alert('오답입니다.') }
 
-       var ans3 = prompt('다음 중 겨울철 별자리가 아닌것은?\n 1.황소자리 2.헤라클레스자리 3.큰개자리 4.쌍둥이자리');
-       if (ans2 == '2'){ alert('정답입니다.'); sum+=1; }
-       else{ alert('오답입니다.') }
+   <div id="1">
+     <div id = "grid">
+       <img src = "12star_html/12star_image/1.jpg" width="100%">
 
-       alert('총 3문제 중에 '+sum+'문제 맞았습니다. 축하드립니다!');
+       <p style="font-size: 40px;">
+          <Strong style="font-size: 40px;">문제 1 : 왼쪽 사진의 별자리 이름은?</Strong><br><br>
 
-   }
-   </script>
-      <button type="button" name="button" onclick="quiz1()">퀴즈 시작</button>
+              <input type="radio" name="quiz1" checked="checked">오리온자리<br>
+              <input type="radio" name="quiz1" >페가수스자리<br>
+              <input type="radio" name="quiz1">물병자리<br>
+              <input type="radio" name="quiz1">카시오페아자리<br><br>
+      <button type="button" name="button" id = "next_btn"onclick="quiz_btn()">다음 문제</button>
+       </p>
+     </div>
+   </div>
 
+
+   <div id="2">
+     <div id = "grid">
+       <img src = "12star_html/12star_image/6.jpg" width="100%">
+
+       <p style="font-size: 40px;">
+          <Strong style="font-size: 40px;">문제 2 : 왼쪽 사진의 별자리 이름은?</Strong><br><br>
+
+              <input type="radio" name="quiz2" checked="checked">사냥꾼자리<br>
+              <input type="radio" name="quiz2" >쌍둥이자리<br>
+              <input type="radio" name="quiz2">작은개자리<br>
+              <input type="radio" name="quiz2">안드로메다자리<br><br>
+      <button type="button" name="button" id = "next_btn"onclick="quiz_btn()">다음 문제</button>
+       </p>
+     </div>
+   </div>
+
+
+   <div id="3">
+     <div id = "grid">
+       <img src = "quiz_img/1.jpg" width="100%">
+
+       <p style="font-size: 40px;">
+          <Strong style="font-size: 40px;">문제 3 : W자 모양으로 북극성을 찾을때 이용하는 별자리는?</Strong><br><br>
+
+              <input type="radio" name="quiz3" checked="checked">궁수자리<br>
+              <input type="radio" name="quiz3" >곰자리<br>
+              <input type="radio" name="quiz3">전갈자리<br>
+              <input type="radio" name="quiz3">카시오페아자리<br><br>
+      <button type="button" name="button" id = "next_btn"onclick="quiz_btn()">다음 문제</button>
+       </p>
+     </div>
+   </div>
+
+   <div id="4">
+     <div id = "grid">
+       <img src = "quiz_img/2.jpg" width="100%">
+
+       <p style="font-size: 40px;">
+          <Strong style="font-size: 40px;">문제 4 : 카시오페아와 북두칠성 사이에 있는 별로써 북극을 찾는데 쓰이는 별은?</Strong><br><br>
+
+              <input type="radio" name="quiz4" checked="checked">게자리<br>
+              <input type="radio" name="quiz4" >우리은하<br>
+              <input type="radio" name="quiz4">북극성<br>
+              <input type="radio" name="quiz4">남극성<br><br>
+      <button type="button" name="button" id = "next_btn"onclick="quiz_btn()">다음 문제</button>
+       </p>
+     </div>
+   </div>
+
+
+   <div id="5">
+     <div id = "grid">
+       <img src = "quiz_img/3.jpg" width="100%">
+
+       <p style="font-size: 40px;">
+          <Strong style="font-size: 40px;">문제 5 : 다음 중 겨울철 별자리가 아닌것은?</Strong><br><br>
+
+              <input type="radio" name="quiz5" checked="checked">황소자리<br>
+              <input type="radio" name="quiz5" >헤라클레스자리<br>
+              <input type="radio" name="quiz5">큰개자리<br>
+              <input type="radio" name="quiz5">쌍둥이자리<br><br>
+      <button type="button" name="button" id = "next_btn"onclick="quiz_btn()">다음 문제</button>
+       </p>
+     </div>
+   </div>
+
+
+
+      <button type="button" name="button" id = "start_btn"onclick="start()">퀴즈 시작</button>
+
+      <input type="text" id="answer_btn" name="abc" value="맞은개수">
+   <script src = "quiz.js"></script>
   </body>
 </html>
