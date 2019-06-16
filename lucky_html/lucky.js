@@ -1,9 +1,15 @@
 function lucky_change(){
+  for(var i = 1; i<37; i++){
+    document.getElementById(i).style.display="none";
+  }
 
-
-  var result = Math.floor(Math.random() * 3 + 1);
-  var lucky_3 = ['1th_lucky.html', '2th_lucky.html', '3th_lucky.html']
-
-  document.location.href = lucky_3[result-1];
+  var l = document.getElementById("lucky");
+  var num = Math.floor(Math.random() * 3);
+  var num12 = num*12
+  for(var i = 1; i<13; i++){
+    if (l.options[l.selectedIndex].value == i){
+      document.getElementById(i+num12).style.display="block";
+    }
+  }
 
 }
